@@ -50,3 +50,17 @@ body {
 	display: none;
 	overflow: hidden;
 }
+
+.container {
+	width: 80%;
+	background-color: #eee;
+	margin: 10em auto;
+	border-radius: 5px;
+	padding: 1em;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	padding: 1em;
+}
