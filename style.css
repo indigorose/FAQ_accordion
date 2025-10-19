@@ -62,11 +62,6 @@ header {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: var(--padding-10);
-	border: 1px solid black;
-}
-
-header > svg {
-	border: 1px solid black;
 }
 
 h1 {
@@ -74,20 +69,18 @@ h1 {
 }
 
 .accordion {
-	border: 1px solid black;
 	transition: 0.4s;
 	display: flex;
 	flex-direction: column;
 }
-.accordion:hover {
-	background-color: #ffffff;
-}
+
 a {
 	color: black;
 	font-size: 1rem;
 	text-decoration: none;
 }
-a:hover {
+
+.card-link:hover {
 	color: var(--font-color-2);
 }
 
@@ -109,6 +102,42 @@ header {
 }
 
 .card-1 {
-	display: flex;
-	flex-direction: row;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	padding: var(--padding-15) 0;
+	border-top: 1px solid var(--background-1);
+}
+
+.card-1:first-child {
+	border-top: none;
+}
+
+.card-link {
+	grid-column: 1 / span 4;
+	padding-left: var(--padding-15);
+	font-weight: 500;
+}
+
+.card-icon {
+	justify-self: center;
+}
+
+.card-text {
+	text-align: justify;
+	color: var(--background-2);
+	padding: var(--padding-15) 0;
+}
+
+@media (width >= 30rem) {
+	body {
+		background-image: url('./assets/images/background-pattern-desktop.svg');
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: contain;
+		background-color: var(--background-1);
+	}
+
+	.container {
+		max-width: 40rem;
+	}
 }
